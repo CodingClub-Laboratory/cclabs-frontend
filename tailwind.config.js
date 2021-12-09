@@ -23,6 +23,7 @@ module.exports = {
     },
     fontFamily: {
       heading: ["Montserrat"],
+      body: ["Open Sans"],
     },
     extend: {},
   },
