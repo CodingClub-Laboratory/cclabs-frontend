@@ -15,6 +15,7 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
+    "watch-tw": "npx tailwindcss -i ./src/styles/tailwind.css -o ./src/styles/tailwind.output.css --watch",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
