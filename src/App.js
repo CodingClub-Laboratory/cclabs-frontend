@@ -1,11 +1,16 @@
 import "./styles/tailwind.output.css";
+import "./styles/styles.css"
 import { Navbar } from "./components/Navbar";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
 function App() {
   return (
-    <div className="w-screen h-screen flex font-extrabold text-5xl bg-blue-300">
-      <Navbar />
-      <img src="blueBox.png" className="w-full" />
-    </div>
+    <BrowserRouter>
+      <Navbar className="" />
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

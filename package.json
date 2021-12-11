@@ -10,16 +10,17 @@
     "postcss": "^8.4.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-router-dom": "^6.1.1",
     "react-scripts": "4.0.3",
     "tailwindcss": "^2.2.19",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "watch-tw": "npx tailwindcss -i ./src/styles/tailwind.css -o ./src/styles/tailwind.output.css --watch",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "watch-tw": "npx tailwindcss -i ./src/styles/tailwind.css -o ./src/styles/tailwind.output.css --watch"
   },
   "eslintConfig": {
     "extends": [

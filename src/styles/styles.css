@@ -1,0 +1,12 @@
+.bg-panel {
+  background-image: url("../assets/Panel-Background.svg");
+  background-position: 50% 0%;
+  clip-path: url("#panelClip");
+}
+
+.shadow-panel {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.2))
+    drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.2))
+    drop-shadow(0px 12px 12px rgba(0, 0, 0, 0.2))
+    drop-shadow(0px 16px 16px rgba(0, 0, 0, 0.1));
+}

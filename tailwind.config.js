@@ -1,3 +1,5 @@
+const colors = require("tailwindcss/colors");
+
 module.exports = {
   mode: "jit",
   purge: ["./public/**/*.html", "./src/**/*.{js,jsx,ts,tsx,vue}"],
@@ -20,10 +22,12 @@ module.exports = {
       black: "#000000",
       white: "#ffffff",
       whitesmoke: "#f5f5f5",
+      gray: colors.gray,
     },
     fontFamily: {
-      heading: ["Montserrat"],
-      body: ["Open Sans"],
+      head: ["Montserrat", "sans-serif"],
+      body: ['"Open Sans"', "sans-serif"],
+      console: ['"Source Code Pro"', "monospace"],
     },
     extend: {},
   },
