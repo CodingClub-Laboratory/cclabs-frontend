@@ -114,7 +114,15 @@ export const Navbar = ({ className }) => {
             <div className="block2 w-7 h-1 bg-white"></div>
             <div className="block3 w-7 h-1 bg-white"></div>
           </button>
-          <div className=" nav-menu h-screen w-full flex flex-col py-32 items-center space-y-6 fixed top-0 right-0 md:hidden font-bold text-2xl bg-gradient-to-bl from-blue-600 to-blue-400">
+          <div className=" nav-menu h-screen w-full flex flex-col py-32 items-center space-y-6 fixed top-0 right-0 md:hidden font-bold text-2xl bg-gradient-to-bl from-blue-800 to-blue-500">
+            <div className="signin font-extrabold py-8 text-white w-4/5 h-3 bg-blue-300 flex justify-center items-center rounded-lg">
+              Sign in with Github
+              <img
+                src="github.png"
+                alt="github logo"
+                className="h-8 w-10 px-1"
+              />
+            </div>
             <NavbarMobileItem name={"Repo of the Day"} className="item-1" />
             <NavbarMobileItem name={"Hire Dev"} className="item-2" />
             <NavbarMobileItem name={"Our Projects"} className="item-3" />
