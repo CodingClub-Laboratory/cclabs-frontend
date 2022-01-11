@@ -5,13 +5,84 @@ import { Link } from "react-router-dom";
 export const Navbar = ({ className }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    if (isOpen) {
+      timeline(
+        [
+          [".block1", { y: 7.5 }],
+          [".block1", { rotate: "45deg" }],
+        ],
+        { duration: 0.5 }
+      );
+      animate(
+        ".block2",
+        {
+          opacity: 0,
+        },
+        { duration: 0.5 }
+      );
+      timeline(
+        [
+          [".block3", { y: -7.5 }],
+          [".block3", { rotate: "-45deg" }],
+        ],
+        { duration: 0.5 }
+      );
+      timeline(
+        [
+          [
+            ".nav-menu",
+            {
+              scaleX: 1,
+              transformOrigin: "right",
+              // borderRadius: "0%",
+            },
+            { duration: 0.5 },
+          ],
+        ],
+        {}
+      );
+    } else {
+      timeline(
+        [
+          [".block1", { rotate: "0deg" }],
+          [".block1", { y: 0 }],
+        ],
+        { duration: 0.5 }
+      );
+      animate(
+        ".block2",
+        {
+          opacity: 1,
+        },
+        { duration: 0.5 }
+      );
+      timeline(
+        [
+          [".block3", { rotate: "0deg" }],
+          [".block3", { y: 0 }],
+        ],
+        {}
+      );
+      timeline(
+        [
+          [
+            ".nav-menu",
+            {
+              scaleX: 0,
+              transformOrigin: "right",
+            },
+            { duration: 0.5 },
+          ],
+        ],
+        {}
+      );
+    }
+  }, [isOpen]);
 
   return (
-    <nav className={`${className} fixed z-30 w-full`}>
-      <div
-        className={`bg-transparent w-full flex items-center justify-center text-white py-2`}
-      >
+    <nav className={`${className} fixed z-30 h-full py-0 w-full`}>
+      <div className="bg-transparent w-full flex items-center justify-center text-white py-2">
         <div className="flex justify-center items-center">
           <img src="console.png" alt="logo" className="h-9 w-auto mx-3 " />
           <Link to="/">
@@ -35,16 +106,18 @@ export const Navbar = ({ className }) => {
             <img src="github.png" alt="github logo" className="h-6 w-6 mr-2 " />
             <p className="hidden md:block">Sign in with Github</p>
           </button>
-          <button className="z-50 md:hidden space-y-1 mx-2" onClick={() => setIsOpen(!isOpen)}>
+          <button
+            className="z-50 space-y-1 mx-2 md:hidden"
+            onClick={() => setIsOpen(!isOpen)}
+          >
             <div className="block1 w-7 h-1 bg-white"></div>
             <div className="block2 w-7 h-1 bg-white"></div>
             <div className="block3 w-7 h-1 bg-white"></div>
           </button>
-          <div className="md:hidden h-screen w-full flex flex-col justify-center items-center">
-            <NavbarMobileItem name={""} className="item-1"/>
-            <NavbarMobileItem name={""} className="item-2"/>
-            <NavbarMobileItem name={""} className="item-3"/>
-            <NavbarMobileItem name={""} className="item-4"/>
+          <div className=" nav-menu h-screen w-full flex flex-col py-32 items-center space-y-6 fixed top-0 right-0 md:hidden font-bold text-2xl bg-gradient-to-bl from-blue-600 to-blue-400">
+            <NavbarMobileItem name={"Repo of the Day"} className="item-1" />
+            <NavbarMobileItem name={"Hire Dev"} className="item-2" />
+            <NavbarMobileItem name={"Our Projects"} className="item-3" />
           </div>
         </div>
       </div>
@@ -77,10 +150,6 @@ const NavItem = ({ name }) => {
   );
 };
 
-const NavbarMobileItem = ({name, className}) => {
-  return (
-    <div className={`${className}`}>
-      {name}
-    </div>
-  )
-}
+const NavbarMobileItem = ({ name, className }) => {
+  return <div className={`${className}`}>{name}</div>;
+};
