@@ -81,7 +81,7 @@ export const Navbar = ({ className }) => {
   }, [isOpen]);
 
   return (
-    <nav className={`${className} fixed z-30 h-full py-0 w-full`}>
+    <nav className={`${className} fixed z-30 h-screen py-0 w-screen`}>
       <div className="bg-transparent w-full flex items-center justify-center text-white py-2">
         <div className="flex justify-center items-center">
           <img src="console.png" alt="logo" className="h-9 w-auto mx-3 " />
