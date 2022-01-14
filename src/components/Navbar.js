@@ -80,9 +80,24 @@ export const Navbar = ({ className }) => {
     }
   }, [isOpen]);
 
+  const [color, setColor] = useState(false);
+  const changeColor = () => {
+    if (window.scrollY >= 700) {
+      setColor(true);
+    } else {
+      setColor(false);
+    }
+  };
+
+  window.addEventListener("scroll", changeColor);
+
   return (
-    <nav className={`${className} fixed z-30 h-screen py-0 w-screen`}>
-      <div className="bg-transparent w-full flex items-center justify-center text-white py-2">
+    <nav className={`${className} fixed z-30 h-auto py-0 w-screen`}>
+      <div
+        className={`${
+          !color ? "bg-transparent" : "bg-blue-800"
+        } w-full flex items-center justify-center  text-white py-2 transition-all duration-500 ease-in-out`}
+      >
         <div className="flex justify-center items-center">
           <img src="console.png" alt="logo" className="h-9 w-auto mx-3 " />
           <Link to="/">
@@ -102,7 +117,7 @@ export const Navbar = ({ className }) => {
               <NavItem name="Our Projects" />
             </Link>
           </div>
-          <button class="hidden mx-2 bg-gradient-to-r from-blue-300 to-blue-400 hover:bg-gradient-to-l text-white  rounded-2xl text-sm justify-center md:flex items-center px-5 py-2 shadow-xl hover:shadow-none transition-all transform hover:translate-y-1 font-body">
+          <button class="hidden mx-8 bg-gradient-to-r from-blue-300 to-blue-400 hover:bg-gradient-to-l text-white  rounded-2xl text-sm justify-center md:flex items-center px-5 py-2 shadow-xl hover:shadow-none transition-all transform hover:translate-y-1 font-body">
             <img src="github.png" alt="github logo" className="h-6 w-6 mr-2 " />
             <p className="hidden md:block">Sign in with Github</p>
           </button>
@@ -114,8 +129,8 @@ export const Navbar = ({ className }) => {
             <div className="block2 w-7 h-1 bg-white"></div>
             <div className="block3 w-7 h-1 bg-white"></div>
           </button>
-          <div className=" nav-menu h-screen w-full flex flex-col py-32 items-center space-y-6 fixed top-0 right-0 md:hidden font-bold text-2xl bg-gradient-to-bl from-blue-800 to-blue-500">
-            <div className="signin font-extrabold py-8 text-white w-4/5 h-3 bg-blue-300 flex justify-center items-center rounded-lg">
+          <div className="nav-menu h-screen w-full flex flex-col py-32 items-center space-y-6 fixed top-0 right-0 md:hidden font-bold text-2xl bg-gradient-to-bl from-blue-800 to-blue-500">
+            <div className="signin font-extrabold py-8 text-white w-4/5 h-3 bg-blue-300 flex justify-center items-center rounded-full">
               Sign in with Github
               <img
                 src="github.png"

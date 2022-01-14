@@ -93,7 +93,7 @@ const Terminal = () => {
 
 const Collaborator = () => {
   return (
-    <div className=" w-full h-screen bg-blue-800 mt-32 rounded-xl md:mt-64 m-2 relative">
+    <div className=" w-11/12 h-screen bg-blue-800 mt-32 rounded-xl md:mt-64 relative mx-auto">
       <div className="h-1/4 absolute top-5 right-5 font-head font-extrabold text-4xl md:text-6xl text-right">
         <span className="text-white">Find your </span>
         <span className="text-blue-100">
