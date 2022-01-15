@@ -35,6 +35,9 @@ module.exports = {
       flex: {
         half: "0.5",
       },
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--gradient-color-stops))",
+      },
     },
   },
   variants: {

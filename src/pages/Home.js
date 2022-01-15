@@ -94,7 +94,7 @@ const Terminal = () => {
 const Collaborator = () => {
   return (
     <div className=" w-11/12 h-screen bg-blue-800 mt-32 rounded-xl md:mt-64 relative mx-auto">
-      <div className="h-1/4 absolute top-5 right-5 font-head font-extrabold text-4xl md:text-6xl text-right">
+      <div className="h-1/4  absolute top-5 right-5 font-head font-extrabold text-4xl md:text-5xl text-right">
         <span className="text-white">Find your </span>
         <span className="text-blue-100">
           <br />
@@ -104,6 +104,16 @@ const Collaborator = () => {
         <span className="text-white">
           <br /> here
         </span>
+      </div>
+
+      <div className="chat w-full md:w-1/2 flex flex-col px-4 pt-44 md:pt-5 md:text-lg font-body font-normal">
+        <div className="yours messages">
+          <div className="message last">Hello, how's it going?</div>
+        </div>
+        <div className="mine messages">
+          <div className="message">Great thanks!</div>
+          <div className="message last">How about you?</div>
+        </div>
       </div>
     </div>
   );
