@@ -1,7 +1,7 @@
-import { animate, stagger, timeline } from "motion";
+import { animate, timeline } from "motion";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-
+import Logo from "../assets/logo.png";
 export const Navbar = ({ className }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -33,7 +33,7 @@ export const Navbar = ({ className }) => {
           [
             ".nav-menu",
             {
-              scaleX: 1,
+              transform: "translateX(0vw)",
               transformOrigin: "right",
               // borderRadius: "0%",
             },
@@ -69,7 +69,7 @@ export const Navbar = ({ className }) => {
           [
             ".nav-menu",
             {
-              scaleX: 0,
+              transform: "translateX(100vw)",
               transformOrigin: "right",
             },
             { duration: 0.5 },
@@ -82,7 +82,7 @@ export const Navbar = ({ className }) => {
 
   const [color, setColor] = useState(false);
   const changeColor = () => {
-    if (window.scrollY >= 700) {
+    if (window.scrollY >= 40) {
       setColor(true);
     } else {
       setColor(false);
@@ -95,13 +95,13 @@ export const Navbar = ({ className }) => {
     <nav className={`${className} fixed z-30 h-auto py-0 w-screen`}>
       <div
         className={`${
-          !color ? "bg-transparent" : "bg-blue-800"
-        } w-full flex items-center justify-center  text-white py-2 transition-all duration-500 ease-in-out`}
+          !color ? "bg-transparent" : "bg-blue-800 shadow-xl"
+        } w-full flex items-center justify-center  text-white py-2 pb-4 ease-in-out`}
       >
-        <div className="flex justify-center items-center">
-          <img src="console.png" alt="logo" className="h-9 w-auto mx-3 " />
+        <div className="flex justify-center items-center w-fit">
+          <img src={Logo} alt="logo" className="h-9 w-auto mx-3 " />
           <Link to="/">
-            <p className="font-head font-bold text-2xl color ">CC Labs</p>
+            <p className="font-head font-bold text-2xl color">CC Labs</p>
           </Link>
         </div>
         <div className="flex-1"></div>
@@ -129,13 +129,13 @@ export const Navbar = ({ className }) => {
             <div className="block2 w-7 h-1 bg-white"></div>
             <div className="block3 w-7 h-1 bg-white"></div>
           </button>
-          <div className="nav-menu h-screen w-full flex flex-col py-32 items-center space-y-6 fixed top-0 right-0 md:hidden font-bold text-2xl bg-gradient-to-bl from-blue-800 to-blue-500">
-            <div className="signin font-extrabold py-8 text-white w-4/5 h-3 bg-blue-300 flex justify-center items-center rounded-full">
-              Sign in with Github
+          <div className="nav-menu h-screen w-full flex flex-col py-32 items-center space-y-6 fixed top-0 right-0 md:hidden font-semibold text-2xl bg-gradient-to-bl from-blue-800 to-blue-500">
+            <div className="signin font-semibold py-8 px-6 text-white w-4/5 h-3 bg-blue-300 flex justify-center items-center rounded-full">
+              <p className="mr-2">Sign in with Github</p>
               <img
                 src="github.png"
                 alt="github logo"
-                className="h-8 w-10 px-1"
+                className="h-8 w-8 "
               />
             </div>
             <NavbarMobileItem name={"Repo of the Day"} className="item-1" />
@@ -160,14 +160,14 @@ const NavItem = ({ name }) => {
       <p
         className={`${
           isHover ? "text-white" : "text-gray-200"
-        } mx-4 my-2 duration-300 font-body text-base`}
+        } mx-4 my-2 duration-300 font-body text-base md:text-sm`}
       >
         {name}
       </p>
       <div
         className={`${
-          !isHover ? "w-1/2" : "w-0"
-        } transition-all bg-white h-0.5`}
+          !isHover ? "w-1/2" : "w-1/5"
+        } transition-all bg-white h-0.5 rounded-full`}
       ></div>
     </button>
   );

@@ -17,8 +17,6 @@ module.exports = {
       "blue-200": "#61a5c2",
       "blue-100": "#89c2d9",
       "blue-000": "#a9d6e5",
-      "console-green": "#B1FF96",
-      "console-yellow": "#FFDA7C",
       transparent: "transparent",
       current: "currentColor",
       black: "#000000",

@@ -25,18 +25,31 @@ const Banner = () => {
           </clipPath>
         </defs>
       </svg>
-      <div className="w-screen h-screen overflow-x-hidden">
+      <svg width={"0"} height={"0"}>
+        <defs>
+          <clipPath id="panelClip2">
+            <rect width={"100vw"} height={"500"} />
+            <ellipse
+              cx={"50vw"}
+              cy={"500"}
+              rx={"calc(50vw + 50px)"}
+              ry={"max(5vh, 50px)"}
+            />
+          </clipPath>
+        </defs>
+      </svg>
+      <section className="w-screen h-screen md:h-[600px] lg:h-screen overflow-x-hidden">
         <div className="w-full h-full shadow-panel">
           <div className="w-full h-full flex bg-blue-300 bg-panel md:bg-cover ">
-            <div className="w-full h-full flex font-extrabold">
-              <h1 className=" font-head text-white text-6xl text-center md: fixed top-48 left-10">
+            <div className="w-full h-full flex flex-col font-extrabold items-start justify-center px-4 lg:px-12 -mt-8 lg:-mt-12">
+              <h1 className=" font-head text-white text-5xl lg:text-8xl text-center ">
                 Lets Code
               </h1>
-              <h1 className=" font-head text-blue-300 text-5xl text-center md: fixed left-10 top-64">
+              <h1 className=" font-head text-blue-300 text-4xl lg:text-7xl text-center ">
                 Together.
               </h1>
-              <div className="w-80 h-30 flex-row font-normal text-sm py-3 md: fixed top-80 left-10 ">
-                <p className="text-white text-center">
+              <div className=" w-full lg:w-1/3 h-30 flex-row font-normal text-base lg:text-lg  py-3 top-80 left-10 ">
+                <p className="text-white ">
                   Surf here at your own Contributors' Hub. Work on exciting
                   projects and imrpove your skill, idk some Lorem Ipsum shit.
                 </p>
@@ -44,32 +57,36 @@ const Banner = () => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </React.Fragment>
   );
 };
 
 const Terminal = () => {
   return (
-    <div className="w-screen h-full md:grid justify-center">
-      <div className="w-3/4 flex-row m-auto md:m-1 text-center md:w-1/4 md:mt-4">
-        <h1 className="text-6xl text-blue-700  font-extrabold font-head">
+    <section className="w-screen my-16 md:mt-0 lg:my-16 h-full md:flex justify-center md:px-12 md:space-x-12">
+      <div className="w-full md:w-1/3 flex flex-col">
+        <h1 className="text-center md:text-left text-5xl lg:text-6xl text-blue-700 font-extrabold font-head">
           Create your
-        </h1>
-        <h1 className="text-6xl text-blue-400  font-extrabold font-head">
-          First Project
-        </h1>
-        <h1 className="text-6xl text-blue-700  font-extrabold font-head">
+          <span className="mx-2 text-blue-400 hover:underline cursor-pointer">
+            First Project
+          </span>
           with us
         </h1>
-        <p className="pt-4">
+        <p className="pt-4 font-semibold font-body text-center md:text-left text-lg">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
           tellus felis, congue at eleifend vel, maximus a arcu. Proin consequat
           nisi quis enim malesuada, ac pretium leo convallis. Donec dictum.
         </p>
       </div>
 
-      <div className=" w-11/12 md:w-1/2 h-1/2 bg-blue-900 rounded-2xl m-auto md:rounded-l-2xl md:absolute md:right-0 mt-5">
+      <div className="hidden md:flex flex-col w-2/3 bg-blue-900 h-[400px] rounded-2xl shadow-lg">
+        <div className="bg-blue-600 w-full h-10 rounded-t-2xl">
+          <img src="" alt="" className="h-7 w-7" />
+        </div>
+      </div>
+
+      {/* <div className=" w-11/12 md:w-1/2 h-3/5 min-h-[500px] md:h-[400px] bg-blue-900 rounded-2xl m-auto md:rounded-l-2xl md:absolute md:right-0 mt-5">
         <div className="w-full h-10 bg-blue-600 rounded-t-2xl md:rounded-tl-2xl flex align-center">
           <img src="powershell.png" className="h-7 w-7 mx-3 my-auto" />
           <h1 className="text-2xl text-white font-medium font-body my-auto mx-1">
@@ -83,17 +100,17 @@ const Terminal = () => {
           Install the latest Terminal for new features and improvements!
           <br />
           <span>(base) PS C:\Users\mypc&gt;</span>
-          <span className="text-console-green font-semibold"> CCLabs </span>
-          <span className="text-console-yellow font-semibold">init</span>
+          <span className="text-[#B1FF96] font-semibold"> CCLabs </span>
+          <span className="text-[#FFDA7C] font-semibold">init</span>
         </p>
-      </div>
-    </div>
+      </div> */}
+    </section>
   );
 };
 
 const Collaborator = () => {
   return (
-    <div className=" w-11/12 h-screen bg-blue-800 mt-32 rounded-xl md:mt-64 relative mx-auto">
+    <section className="shadow-lg w-11/12 h-screen bg-blue-800 my-32 rounded-2xl relative mx-auto">
       <div className="h-1/4  absolute top-5 right-5 font-head font-extrabold text-4xl md:text-5xl text-right">
         <span className="text-white">Find your </span>
         <span className="text-blue-100">
@@ -115,7 +132,7 @@ const Collaborator = () => {
           <div className="message last">How about you?</div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
