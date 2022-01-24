@@ -1,4 +1,7 @@
 import React from "react";
+import { useEffect, useRef } from "react";
+import pslogo from "../assets/powershell.png";
+import { init } from "ityped";
 
 const Home = () => {
   return (
@@ -63,6 +66,16 @@ const Banner = () => {
 };
 
 const Terminal = () => {
+  const textRef = useRef();
+  useEffect(() => {
+    init(textRef.current, {
+      showCursor: true,
+      strings: ["CCLabs init"],
+      typeSpeed: 200,
+      backSpeed: 100,
+      backDelay: 2000,
+    });
+  }, []);
   return (
     <section className="w-screen my-16 md:mt-0 lg:my-16 h-full md:flex justify-center md:px-12 md:space-x-12">
       <div className="w-full md:w-1/3 flex flex-col">
@@ -81,29 +94,24 @@ const Terminal = () => {
       </div>
 
       <div className="hidden md:flex flex-col w-2/3 bg-blue-900 h-[400px] rounded-2xl shadow-lg">
-        <div className="bg-blue-600 w-full h-10 rounded-t-2xl">
-          <img src="" alt="" className="h-7 w-7" />
-        </div>
-      </div>
-
-      {/* <div className=" w-11/12 md:w-1/2 h-3/5 min-h-[500px] md:h-[400px] bg-blue-900 rounded-2xl m-auto md:rounded-l-2xl md:absolute md:right-0 mt-5">
-        <div className="w-full h-10 bg-blue-600 rounded-t-2xl md:rounded-tl-2xl flex align-center">
-          <img src="powershell.png" className="h-7 w-7 mx-3 my-auto" />
-          <h1 className="text-2xl text-white font-medium font-body my-auto mx-1">
+        <div className="bg-blue-600 w-full h-10 rounded-t-2xl flex items-center">
+          <img src={pslogo} alt="" className="h-7 w-7 mx-3" />
+          <h1 className="text-white font-semibold font-console text-xl">
             Terminal
           </h1>
         </div>
-        <p className="text-white ml-3 mt-2 font-console text-lg">
+        <p className="text-white ml-3 font-console mt-3">
           Terminal
           <br /> Copyright (C) CC Labs. All rights reserved.
           <br />
+          <br />
           Install the latest Terminal for new features and improvements!
           <br />
-          <span>(base) PS C:\Users\mypc&gt;</span>
-          <span className="text-[#B1FF96] font-semibold"> CCLabs </span>
-          <span className="text-[#FFDA7C] font-semibold">init</span>
+          <br />
+          <span>(base) PS C:\Users\mypc&gt; </span>
+          <span className="text-[#B1FF96] font-semibold" ref={textRef}></span>
         </p>
-      </div> */}
+      </div>
     </section>
   );
 };

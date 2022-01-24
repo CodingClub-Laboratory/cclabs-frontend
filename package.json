@@ -8,6 +8,7 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "autoprefixer": "^10.4.0",
+    "ityped": "^1.0.3",
     "motion": "^10.4.0",
     "postcss": "^8.4.4",
     "react": "^17.0.2",
