@@ -165,10 +165,11 @@ const Slider = () => {
       <div className="w-full flex flex-col lg:text-center">
         <h1 className="text-center text-5xl lg:text-6xl text-blue-700 font-extrabold font-head">
           Make your
-          <span className="inline-block mx-2 text-blue-400 hover:underline cursor-pointer whitespace-nowrap">
+          <span className="inline-block mx-2 text-blue-400 hover:underline cursor-pointer">
             contributions
           </span>
-          here
+          here 
+
         </h1>
         <p className="pt-4 font-semibold font-body text-center md:text-left text-lg">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
