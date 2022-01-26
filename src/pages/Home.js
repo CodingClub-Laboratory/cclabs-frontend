@@ -3,12 +3,27 @@ import { useEffect, useRef } from "react";
 import pslogo from "../assets/powershell.png";
 import { init } from "ityped";
 
+/*{import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/grid";
+import "swiper/css/pagination";
+
+import "../styles/styles.css";
+
+// import Swiper core and required modules
+import SwiperCore, { Grid, Pagination } from "swiper";
+
+// install Swiper modules
+SwiperCore.use([Grid, Pagination]);}*/
 const Home = () => {
   return (
     <React.Fragment>
       <Banner />
       <Terminal />
       <Collaborator />
+      <Slider />
     </React.Fragment>
   );
 };
@@ -121,7 +136,7 @@ const Collaborator = () => {
     <section className="shadow-lg w-11/12 h-screen bg-blue-800 my-32 rounded-2xl relative mx-auto">
       <div className="h-1/4  absolute top-5 right-5 font-head font-extrabold text-4xl md:text-5xl text-right">
         <span className="text-white">Find your </span>
-        <span className="text-blue-100">
+        <span className="text-blue-100 hover:underline cursor-pointer">
           <br />
           dream
           <br /> collaborators
@@ -140,6 +155,52 @@ const Collaborator = () => {
           <div className="message last">How about you?</div>
         </div>
       </div>
+    </section>
+  );
+};
+
+const Slider = () => {
+  return (
+    <section className="w-screen h-screen md:h-screen lg:h-screen overflow-x-hidden pt-10">
+      <div className="w-full flex flex-col text-center">
+        <h1 className="text-center md:text-left text-5xl lg:text-6xl text-blue-700 font-extrabold font-head">
+          Make your
+          <span className="mx-2 text-blue-400 hover:underline cursor-pointer">
+            contributions
+          </span>
+          here
+        </h1>
+        <p className="pt-4 font-semibold font-body text-center md:text-left text-lg">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+          tellus felis, congue at eleifend vel, maximus a arcu. Proin consequat
+          nisi quis enim malesuada, ac pretium leo convallis. Donec dictum.
+        </p>
+      </div>
+
+      {/*
+      <div>
+        <Swiper
+          slidesPerView={3}
+          grid={{
+            rows: 2,
+          }}
+          spaceBetween={30}
+          pagination={{
+            clickable: true,
+          }}
+          className="mySwiper"
+        >
+          <SwiperSlide>Slide 1</SwiperSlide>
+          <SwiperSlide>Slide 2</SwiperSlide>
+          <SwiperSlide>Slide 3</SwiperSlide>
+          <SwiperSlide>Slide 4</SwiperSlide>
+          <SwiperSlide>Slide 5</SwiperSlide>
+          <SwiperSlide>Slide 6</SwiperSlide>
+          <SwiperSlide>Slide 7</SwiperSlide>
+          <SwiperSlide>Slide 8</SwiperSlide>
+          <SwiperSlide>Slide 9</SwiperSlide>
+        </Swiper>
+        </div>*/}
     </section>
   );
 };
