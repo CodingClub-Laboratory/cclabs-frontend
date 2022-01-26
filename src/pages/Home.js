@@ -161,11 +161,11 @@ const Collaborator = () => {
 
 const Slider = () => {
   return (
-    <section className="w-screen h-screen md:h-screen lg:h-screen overflow-x-hidden pt-10">
-      <div className="w-full flex flex-col text-center">
-        <h1 className="text-center md:text-left text-5xl lg:text-6xl text-blue-700 font-extrabold font-head">
+    <section className="w-screen h-screen md:h-screen lg:h-screen overflow-x-hidden pt-10 ">
+      <div className="w-full flex flex-col lg:text-center">
+        <h1 className="text-center text-5xl lg:text-6xl text-blue-700 font-extrabold font-head">
           Make your
-          <span className="mx-2 text-blue-400 hover:underline cursor-pointer">
+          <span className="inline-block mx-2 text-blue-400 hover:underline cursor-pointer whitespace-nowrap">
             contributions
           </span>
           here
