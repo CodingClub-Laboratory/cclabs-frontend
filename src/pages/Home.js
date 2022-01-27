@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { useEffect, useRef } from "react";
 import pslogo from "../assets/powershell.png";
 import { init } from "ityped";
+import '../styles/slider.css';
 
 /*{import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -176,33 +177,68 @@ const Slider = () => {
           nisi quis enim malesuada, ac pretium leo convallis. Donec dictum.
         </p>
       </div>
-
-      {/*
-      <div>
-        <Swiper
-          slidesPerView={3}
-          grid={{
-            rows: 2,
-          }}
-          spaceBetween={30}
-          pagination={{
-            clickable: true,
-          }}
-          className="mySwiper"
-        >
-          <SwiperSlide>Slide 1</SwiperSlide>
-          <SwiperSlide>Slide 2</SwiperSlide>
-          <SwiperSlide>Slide 3</SwiperSlide>
-          <SwiperSlide>Slide 4</SwiperSlide>
-          <SwiperSlide>Slide 5</SwiperSlide>
-          <SwiperSlide>Slide 6</SwiperSlide>
-          <SwiperSlide>Slide 7</SwiperSlide>
-          <SwiperSlide>Slide 8</SwiperSlide>
-          <SwiperSlide>Slide 9</SwiperSlide>
-        </Swiper>
-        </div>*/}
+      <Carousel>
+        <CarouselItem>Item 1</CarouselItem>
+        <CarouselItem>Item 2</CarouselItem>
+        <CarouselItem>Item 3</CarouselItem>
+        <CarouselItem>Item 4</CarouselItem>
+        <CarouselItem>Item 5</CarouselItem>
+      </Carousel>
     </section>
   );
 };
+
+const CarouselItem = ({ children, classNames }) => {
+  return (
+    <div className={`${classNames}`}>
+      {children}
+    </div>
+  )
+}
+
+const Carousel = ({ children }) => {
+
+  const [activeIndex, setActiveIndex] = useState(0);
+  const halfLength = Math.floor(children.length / 2);
+
+  const incIndex = () => {
+
+    if (activeIndex < Math.floor(children.length / 2)) {
+      setActiveIndex(activeIndex + 1);
+    }
+
+  }
+
+  const decIndex = () => {
+
+    if (activeIndex > -(Math.floor(children.length / 2))) {
+      setActiveIndex(activeIndex - 1);
+    }
+
+  }
+
+  return (
+    <React.Fragment>
+      <div className="carousel">
+        <div className="inner" style={{ transform: `translateX(${activeIndex * -200}px)` }}>
+          {React.Children.map(children, (child, index) => {
+            const shiftedIndex = index - halfLength;
+            if(shiftedIndex === activeIndex){
+              return React.cloneElement(child, {classNames : `carousel-item carousel-item__active`});
+            } else if ((shiftedIndex === activeIndex - 1) || (shiftedIndex === activeIndex + 1)) {
+              return React.cloneElement(child, {classNames : `carousel-item carousel-item__nearby`});
+            } else {
+              return React.cloneElement(child, {classNames : `carousel-item carousel-item__hidden`});
+            }
+          })}
+        </div>
+      </div>
+      <div>
+        <button onClick={decIndex}>Left</button>
+        <button onClick={incIndex}>Right</button>
+      </div>
+    </React.Fragment>
+  )
+}
 
 export default Home;

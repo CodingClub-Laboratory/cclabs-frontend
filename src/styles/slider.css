@@ -1,0 +1,46 @@
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    height: 300px;
+    overflow: hidden;
+    transform: rotate(45deg);
+}
+
+.inner {
+    white-space: nowrap;
+    transition: transform 0.5s;
+}
+
+.carousel-item {
+    position: relative;
+    display: inline-flex;
+    width: 200px;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+    background-color: aquamarine;
+}
+
+.carousel-item__active {
+    opacity: 1;
+    z-index: 10;
+    /* background-color: aqua; */
+    transform: rotate(-45deg);
+    transition: transform 0.5s;
+}
+
+.carousel-item__nearby {
+    opacity: 1;
+    z-index: 9;
+    /* background-color: aliceblue; */
+    transform: rotate(-45deg) scale(0.7);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.carousel-item__hidden {
+    opacity: 0;
+    transform: rotate(-45deg) scale(0.7);
+    transition: opacity 0.3s;
+}
