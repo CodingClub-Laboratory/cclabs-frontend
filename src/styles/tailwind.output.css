@@ -967,30 +967,6 @@ video {
   overflow-x: hidden;
 }
 
-.whitespace-normal {
-  white-space: normal;
-}
-
-.whitespace-nowrap {
-  white-space: nowrap;
-}
-
-.whitespace-pre {
-  white-space: pre;
-}
-
-.whitespace-pre-wrap {
-  white-space: pre-wrap;
-}
-
-.break-words {
-  overflow-wrap: break-word;
-}
-
-.break-all {
-  word-break: break-all;
-}
-
 .rounded-2xl {
   border-radius: 1rem;
 }
@@ -1099,6 +1075,21 @@ video {
   padding-bottom: 0.75rem;
 }
 
+.px-\[10\%\] {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.px-\[\] {
+  padding-left: ;
+  padding-right: ;
+}
+
+.px-\[5\%\] {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
 .pb-4 {
   padding-bottom: 1rem;
 }
@@ -1184,6 +1175,10 @@ video {
 
 .font-normal {
   font-weight: 400;
+}
+
+.font-medium {
+  font-weight: 500;
 }
 
 .text-white {
@@ -1316,6 +1311,16 @@ video {
     padding-right: 3rem;
   }
 
+  .md\:px-\[10\] {
+    padding-left: 10;
+    padding-right: 10;
+  }
+
+  .md\:px-\[10\%\] {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
   .md\:pt-5 {
     padding-top: 1.25rem;
   }
@@ -1361,6 +1366,31 @@ video {
   .lg\:px-12 {
     padding-left: 3rem;
     padding-right: 3rem;
+  }
+
+  .lg\:px-\[10\%\] {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .lg\:px-10 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  .lg\:px-\[30\%\] {
+    padding-left: 30%;
+    padding-right: 30%;
+  }
+
+  .lg\:px-\[40\%\] {
+    padding-left: 40%;
+    padding-right: 40%;
+  }
+
+  .lg\:px-\[20\%\] {
+    padding-left: 20%;
+    padding-right: 20%;
   }
 
   .lg\:text-center {

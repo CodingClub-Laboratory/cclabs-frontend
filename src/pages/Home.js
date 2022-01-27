@@ -94,14 +94,14 @@ const Terminal = () => {
   return (
     <section className="w-screen my-16 md:mt-0 lg:my-16 h-full md:flex justify-center md:px-12 md:space-x-12">
       <div className="w-full md:w-1/3 flex flex-col">
-        <h1 className="text-center md:text-left text-5xl lg:text-6xl text-blue-700 font-extrabold font-head">
+        <h1 className="text-center  md:text-left text-5xl lg:text-6xl text-blue-700 font-extrabold font-head">
           Create your
           <span className="mx-2 text-blue-400 hover:underline cursor-pointer">
             First Project
           </span>
           with us
         </h1>
-        <p className="pt-4 font-semibold font-body text-center md:text-left text-lg">
+        <p className="pt-4 px-[5%] text-blue-700 font-medium font-body text-center md:text-left text-lg">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
           tellus felis, congue at eleifend vel, maximus a arcu. Proin consequat
           nisi quis enim malesuada, ac pretium leo convallis. Donec dictum.
@@ -171,10 +171,10 @@ const Slider = () => {
           here 
 
         </h1>
-        <p className="pt-4 font-semibold font-body text-center md:text-left text-lg">
+        <p className="text-center pt-4 text-blue-700 font-medium font-body px-[5%] md:px-[10%] text-lg lg:px-[20%]">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
           tellus felis, congue at eleifend vel, maximus a arcu. Proin consequat
-          nisi quis enim malesuada, ac pretium leo convallis. Donec dictum.
+          nisi quis enim malesuada, ac pretium leo convallis
         </p>
       </div>
 
