@@ -24,4 +24,4 @@ yarn-error.log*
 
 
 # Tailwind Output
-/src/styles/tailwind.output.css
+*.output.css
