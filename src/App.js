@@ -3,6 +3,8 @@ import "./styles/styles.css";
 import { Navbar } from "./components/Navbar";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
+import Doc from "./components/Doc";
+
 function App() {
   return (
     <div className="overflow-x-hidden">
@@ -10,6 +12,7 @@ function App() {
         <Navbar className="" />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/doc" element={<Doc />} />
         </Routes>
       </BrowserRouter>
     </div>
