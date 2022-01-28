@@ -968,6 +968,10 @@ video {
   justify-content: center;
 }
 
+.gap-6 {
+  gap: 1.5rem;
+}
+
 .space-x-3 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.75rem * var(--tw-space-x-reverse));
@@ -1008,6 +1012,11 @@ video {
   background-color: rgba(242, 249, 251, var(--tw-bg-opacity));
 }
 
+.bg-blue-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(1, 79, 134, var(--tw-bg-opacity));
+}
+
 .bg-transparent {
   background-color: transparent;
 }
@@ -1030,11 +1039,6 @@ video {
 .bg-blue-900 {
   --tw-bg-opacity: 1;
   background-color: rgba(1, 42, 74, var(--tw-bg-opacity));
-}
-
-.bg-blue-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgba(1, 79, 134, var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-r {
@@ -1063,9 +1067,18 @@ video {
   --tw-gradient-to: #2a6f97;
 }
 
+.p-3 {
+  padding: 0.75rem;
+}
+
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .py-0 {
@@ -1333,6 +1346,14 @@ video {
 
   .md\:w-1\/2 {
     width: 50%;
+  }
+
+  .md\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .md\:grid-rows-1 {
+    grid-template-rows: repeat(1, minmax(0, 1fr));
   }
 
   .md\:space-x-12 > :not([hidden]) ~ :not([hidden]) {

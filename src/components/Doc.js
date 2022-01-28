@@ -17,16 +17,18 @@ const Heading = (props) => {
 const Section = (props) => {
   return (
     <section>
-      <h2 className="text-xl text-blue-200 font-semibold">{props.subHeading}</h2>
+      <h2 className="text-xl text-blue-200 font-semibold">
+        {props.subHeading}
+      </h2>
       <p className="my-3">{props.para}</p>
     </section>
   );
 };
 
-function Doc() {
+const Main = () => {
   return (
-    <article className="bg-[#F2F9FB] py-5 mt-16">
-      <div className="mx-[35px] max-w-[700px] md:mx-auto ">
+    <div className="bg-[#F2F9FB] py-5">
+      <div className="mx-[35px] max-w-[700px] md:mx-auto">
         <Heading
           heading="Lorem Ipsium Heading for Documentation"
           date="DD/MM/YYYY"
@@ -35,6 +37,66 @@ function Doc() {
         <Section subHeading="SubHeading" para={duplicateText} />
         <Section subHeading="SubHeading" para={duplicateText} />
       </div>
+    </div>
+  );
+};
+
+const ForContact = (props) => {
+  return (
+    <div>
+      <h2 className="text-xl">
+        {props.firstname} {props.lastname}
+      </h2>
+      <p>
+        {props.year}, {props.dept}
+      </p>
+      <p>{props.phone}</p>
+      <p>{props.email}</p>
+    </div>
+  );
+};
+
+const Contact = (props) => {
+  return (
+    <div className="bg-blue-600 p-3">
+      <div className="mx-[35px] max-w-[700px] md:mx-auto py-4 text-white">
+        <h1 className="text-2xl pb-4">To Contact</h1>
+        <div className="grid gap-6 md:grid-cols-4 md:grid-rows-1">
+          <ForContact
+            firstname="First"
+            lastname="Last"
+            year="Year"
+            dept="Dept"
+            email="Email"
+            phone="Phone no."
+          />
+          <ForContact
+            firstname="First"
+            lastname="Last"
+            year="Year"
+            dept="Dept"
+            email="Email"
+            phone="Phone no."
+          />
+          <ForContact
+            firstname="First"
+            lastname="Last"
+            year="Year"
+            dept="Dept"
+            email="Email"
+            phone="Phone no."
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+function Doc() {
+  return (
+    <article className="mt-16">
+      <Main />
+      <Contact />
     </article>
   );
 }
