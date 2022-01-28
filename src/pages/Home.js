@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { useEffect, useRef } from "react";
 import pslogo from "../assets/powershell.png";
 import { init } from "ityped";
-import '../styles/slider.css';
+import { Slider, SliderItem } from "../components/Slider";
 
 /*{import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -24,7 +24,7 @@ const Home = () => {
       <Banner />
       <Terminal />
       <Collaborator />
-      <Slider />
+      <Contributions />
     </React.Fragment>
   );
 };
@@ -160,7 +160,7 @@ const Collaborator = () => {
   );
 };
 
-const Slider = () => {
+const Contributions = () => {
   return (
     <section className="w-screen h-screen md:h-screen lg:h-screen overflow-x-hidden pt-10 ">
       <div className="w-full flex flex-col lg:text-center">
@@ -169,7 +169,7 @@ const Slider = () => {
           <span className="inline-block mx-2 text-blue-400 hover:underline cursor-pointer">
             contributions
           </span>
-          here 
+          here
 
         </h1>
         <p className="text-center pt-4 text-blue-700 font-medium font-body px-[5%] md:px-[10%] text-lg lg:px-[20%]">
@@ -178,68 +178,19 @@ const Slider = () => {
           nisi quis enim malesuada, ac pretium leo convallis
         </p>
       </div>
-      <Carousel>
-        <CarouselItem>Item 1</CarouselItem>
-        <CarouselItem>Item 2</CarouselItem>
-        <CarouselItem>Item 3</CarouselItem>
-        <CarouselItem>Item 4</CarouselItem>
-        <CarouselItem>Item 5</CarouselItem>
-      </Carousel>
+      <div className="slider mt-36">
+        <Slider>
+          <SliderItem>Item 1</SliderItem>
+          <SliderItem>Item 2</SliderItem>
+          <SliderItem>Item 3</SliderItem>
+          <SliderItem>Item 4</SliderItem>
+          <SliderItem>Item 5</SliderItem>
+        </Slider>
+      </div>
     </section>
   );
 };
 
-const CarouselItem = ({ children, classNames }) => {
-  return (
-    <div className={`${classNames}`}>
-      {children}
-    </div>
-  )
-}
 
-const Carousel = ({ children }) => {
-
-  const [activeIndex, setActiveIndex] = useState(0);
-  const halfLength = Math.floor(children.length / 2);
-
-  const incIndex = () => {
-
-    if (activeIndex < Math.floor(children.length / 2)) {
-      setActiveIndex(activeIndex + 1);
-    }
-
-  }
-
-  const decIndex = () => {
-
-    if (activeIndex > -(Math.floor(children.length / 2))) {
-      setActiveIndex(activeIndex - 1);
-    }
-
-  }
-
-  return (
-    <React.Fragment>
-      <div className="carousel">
-        <div className="inner" style={{ transform: `translateX(${activeIndex * -200}px)` }}>
-          {React.Children.map(children, (child, index) => {
-            const shiftedIndex = index - halfLength;
-            if(shiftedIndex === activeIndex){
-              return React.cloneElement(child, {classNames : `carousel-item carousel-item__active`});
-            } else if ((shiftedIndex === activeIndex - 1) || (shiftedIndex === activeIndex + 1)) {
-              return React.cloneElement(child, {classNames : `carousel-item carousel-item__nearby`});
-            } else {
-              return React.cloneElement(child, {classNames : `carousel-item carousel-item__hidden`});
-            }
-          })}
-        </div>
-      </div>
-      <div>
-        <button onClick={decIndex}>Left</button>
-        <button onClick={incIndex}>Right</button>
-      </div>
-    </React.Fragment>
-  )
-}
 
 export default Home;

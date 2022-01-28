@@ -117,7 +117,7 @@ export const Navbar = ({ className }) => {
               <NavItem name="Our Projects" />
             </Link>
           </div>
-          <button class="hidden mx-8 bg-gradient-to-r from-blue-300 to-blue-400 hover:bg-gradient-to-l text-white  rounded-2xl text-sm justify-center md:flex items-center px-5 py-2 shadow-xl hover:shadow-none transition-all transform hover:translate-y-1 font-body">
+          <button className="hidden mx-8 bg-gradient-to-r from-blue-300 to-blue-400 hover:bg-gradient-to-l text-white  rounded-2xl text-sm justify-center md:flex items-center px-5 py-2 shadow-xl hover:shadow-none transition-all transform hover:translate-y-1 font-body">
             <img src="github.png" alt="github logo" className="h-6 w-6 mr-2 " />
             <p className="hidden md:block">Sign in with Github</p>
           </button>
