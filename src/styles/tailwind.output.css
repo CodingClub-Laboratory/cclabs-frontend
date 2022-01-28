@@ -740,6 +740,21 @@ video {
   z-index: 50;
 }
 
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.my-3 {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.mx-\[35px\] {
+  margin-left: 35px;
+  margin-right: 35px;
+}
+
 .mx-3 {
   margin-left: 0.75rem;
   margin-right: 0.75rem;
@@ -780,6 +795,10 @@ video {
   margin-right: auto;
 }
 
+.mt-16 {
+  margin-top: 4rem;
+}
+
 .mr-2 {
   margin-right: 0.5rem;
 }
@@ -794,6 +813,10 @@ video {
 
 .mt-3 {
   margin-top: 0.75rem;
+}
+
+.inline-block {
+  display: inline-block;
 }
 
 .flex {
@@ -908,6 +931,10 @@ video {
   width: 91.666667%;
 }
 
+.max-w-\[700px\] {
+  max-width: 700px;
+}
+
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -976,6 +1003,11 @@ video {
   border-top-right-radius: 1rem;
 }
 
+.bg-\[\#F2F9FB\] {
+  --tw-bg-opacity: 1;
+  background-color: rgba(242, 249, 251, var(--tw-bg-opacity));
+}
+
 .bg-transparent {
   background-color: transparent;
 }
@@ -1029,6 +1061,11 @@ video {
 
 .to-blue-500 {
   --tw-gradient-to: #2a6f97;
+}
+
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
 }
 
 .py-0 {
@@ -1107,6 +1144,21 @@ video {
   font-family: "Source Code Pro", monospace;
 }
 
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -1137,11 +1189,6 @@ video {
   line-height: 2.5rem;
 }
 
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
 .font-bold {
   font-weight: 700;
 }
@@ -1156,6 +1203,16 @@ video {
 
 .font-normal {
   font-weight: 400;
+}
+
+.text-blue-600 {
+  --tw-text-opacity: 1;
+  color: rgba(1, 79, 134, var(--tw-text-opacity));
+}
+
+.text-blue-200 {
+  --tw-text-opacity: 1;
+  color: rgba(97, 165, 194, var(--tw-text-opacity));
 }
 
 .text-white {
@@ -1239,6 +1296,11 @@ video {
 @media (min-width: 768px) {
   .md\:visible {
     visibility: visible;
+  }
+
+  .md\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .md\:mt-0 {
