@@ -2,8 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 700px;
-    height: 500px;
+    width: 100vw;
+    height: 67vh;
     overflow: hidden;
     transform: rotate(45deg);
 }
@@ -18,8 +18,8 @@
     padding: 10px 20px;
     position: relative;
     display: inline-flex;
-    width: 200px;
-    height: 200px;
+    width: 30vw;
+    height: 30vw;
     align-items: center;
     justify-content: center;
     background-color: rgba(1, 58, 99, 1);
@@ -93,3 +93,27 @@ p {
     border-radius: 50%;
     margin-right: 15px;
 }
+
+@media only screen and (min-width: 768px) {
+    .slider_item{
+        width:20vw;
+        height:20vw;
+    }
+    .slider_container {
+        width:67vw;
+        height: 82vh;
+    }
+}
+
+
+/* @media only screen and (min-width: 1024px) {
+    .slider_item{
+        width:200px;
+        height:200px;
+    }
+    .slider_container {
+        width:700px;
+        height: 500px;
+    }
+} */
+

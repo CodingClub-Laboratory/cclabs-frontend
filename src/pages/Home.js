@@ -163,22 +163,23 @@ const Collaborator = () => {
 const Contributions = () => {
   return (
     <section className="w-screen h-screen md:h-screen lg:h-screen overflow-x-hidden pt-10 ">
-      <div className="w-full flex flex-col lg:text-center">
-        <h1 className="text-center text-5xl lg:text-6xl text-blue-700 font-extrabold font-head">
+      <div className="w-full flex flex-col lg:order-last lg:pr-[5%] lg:absolute lg:w-[45vw] lg:right-0">
+        <h1 className="text-center text-5xl lg:text-6xl lg:text-right text-blue-700 font-extrabold font-head">
           Make your
           <span className="inline-block mx-2 text-blue-400 hover:underline cursor-pointer">
             contributions
           </span>
+          <br className="hidden lg:block"/>
           here
 
         </h1>
-        <p className="text-center pt-4 text-blue-700 font-medium font-body px-[5%] md:px-[10%] text-lg lg:px-[20%]">
+        <p className="text-center pt-4 text-blue-700 font-medium font-body px-[5%] md:px-[10%] lg:px-0 text-lg lg:px-[20%] lg:text-right">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
           tellus felis, congue at eleifend vel, maximus a arcu. Proin consequat
           nisi quis enim malesuada, ac pretium leo convallis
         </p>
       </div>
-      <div className="slider mt-36">
+      <div className="slider mt-[5vh] md:mt-[10vh] ">
         <Slider>
           <SliderItem>Item 1</SliderItem>
           <SliderItem>Item 2</SliderItem>
