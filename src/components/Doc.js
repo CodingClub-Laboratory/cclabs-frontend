@@ -6,7 +6,7 @@ const duplicateText =
 const Heading = (props) => {
   return (
     <section>
-      <h1 className="text-3xl text-blue-600 font-bold">{props.heading}</h1>
+      <h1 className="text-3xl text-primary-600 font-bold">{props.heading}</h1>
       <time className="inline-block my-4 text-xs" dateTime={props.date}>
         {props.date} {props.day}
       </time>
@@ -17,7 +17,7 @@ const Heading = (props) => {
 const Section = (props) => {
   return (
     <section>
-      <h2 className="text-xl text-blue-200 font-semibold">
+      <h2 className="text-xl text-primary-200 font-semibold">
         {props.subHeading}
       </h2>
       <p className="my-3">{props.para}</p>
@@ -58,7 +58,7 @@ const ForContact = (props) => {
 
 const Contact = (props) => {
   return (
-    <div className="bg-blue-600 p-3">
+    <div className="bg-primary-600 p-3">
       <div className="mx-[35px] max-w-[700px] md:mx-auto py-4 text-white">
         <h1 className="text-2xl pb-4">To Contact</h1>
         <div className="grid gap-6 md:grid-cols-4 md:grid-rows-1">

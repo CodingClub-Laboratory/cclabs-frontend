@@ -59,12 +59,12 @@ const Banner = () => {
       </svg>
       <section className="w-screen h-screen md:h-[600px] lg:h-screen overflow-x-hidden">
         <div className="w-full h-full shadow-panel">
-          <div className="w-full h-full flex bg-blue-300 bg-panel md:bg-cover ">
+          <div className="w-full h-full flex bg-primary-300 bg-panel md:bg-cover ">
             <div className="w-full h-full flex flex-col font-extrabold items-start justify-center px-4 lg:px-12 -mt-8 lg:-mt-12">
               <h1 className=" font-head text-white text-5xl lg:text-8xl text-center ">
                 Lets Code
               </h1>
-              <h1 className=" font-head text-blue-300 text-4xl lg:text-7xl text-center ">
+              <h1 className=" font-head text-primary-300 text-4xl lg:text-7xl text-center ">
                 Together.
               </h1>
               <div className=" w-full lg:w-1/3 h-30 flex-row font-normal text-base lg:text-lg  py-3 top-80 left-10 ">
@@ -95,22 +95,22 @@ const Terminal = () => {
   return (
     <section className="w-screen my-16 md:mt-0 lg:my-16 h-full md:flex justify-center md:px-12 md:space-x-12">
       <div className="w-full md:w-1/3 flex flex-col">
-        <h1 className="text-center  md:text-left text-5xl lg:text-6xl text-blue-700 font-extrabold font-head">
+        <h1 className="text-center  md:text-left text-5xl lg:text-6xl text-primary-700 font-extrabold font-head">
           Create your
-          <span className="mx-2 text-blue-400 hover:underline cursor-pointer">
+          <span className="mx-2 text-primary-400 hover:underline cursor-pointer">
             First Project
           </span>
           with us
         </h1>
-        <p className="pt-4 px-[5%] text-blue-700 font-medium font-body text-center md:text-left text-lg">
+        <p className="pt-4 px-[5%] text-primary-700 font-medium font-body text-center md:text-left text-lg">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
           tellus felis, congue at eleifend vel, maximus a arcu. Proin consequat
           nisi quis enim malesuada, ac pretium leo convallis. Donec dictum.
         </p>
       </div>
 
-      <div className="hidden md:flex flex-col w-2/3 bg-blue-900 h-[400px] rounded-2xl shadow-lg">
-        <div className="bg-blue-600 w-full h-10 rounded-t-2xl flex items-center">
+      <div className="hidden md:flex flex-col w-2/3 bg-primary-900 h-[400px] rounded-2xl shadow-lg">
+        <div className="bg-primary-600 w-full h-10 rounded-t-2xl flex items-center">
           <img src={pslogo} alt="" className="h-7 w-7 mx-3" />
           <h1 className="text-white font-semibold font-console text-xl">
             Terminal
@@ -134,10 +134,10 @@ const Terminal = () => {
 
 const Collaborator = () => {
   return (
-    <section className="shadow-lg w-11/12 h-screen bg-blue-800 my-32 rounded-2xl relative mx-auto">
+    <section className="shadow-lg w-11/12 h-screen bg-primary-800 my-32 rounded-2xl relative mx-auto">
       <div className="h-1/4  absolute top-5 right-5 font-head font-extrabold text-4xl md:text-5xl text-right">
         <span className="text-white">Find your </span>
-        <span className="text-blue-100 hover:underline cursor-pointer">
+        <span className="text-primary-100 hover:underline cursor-pointer">
           <br />
           dream
           <br /> collaborators
@@ -164,15 +164,15 @@ const Contributions = () => {
   return (
     <section className="w-screen h-screen md:h-screen lg:h-screen overflow-x-hidden pt-10 ">
       <div className="w-full flex flex-col lg:text-center">
-        <h1 className="text-center text-5xl lg:text-6xl text-blue-700 font-extrabold font-head">
+        <h1 className="text-center text-5xl lg:text-6xl text-primary-700 font-extrabold font-head">
           Make your
-          <span className="inline-block mx-2 text-blue-400 hover:underline cursor-pointer">
+          <span className="inline-block mx-2 text-primary-400 hover:underline cursor-pointer">
             contributions
           </span>
           here
 
         </h1>
-        <p className="text-center pt-4 text-blue-700 font-medium font-body px-[5%] md:px-[10%] text-lg lg:px-[20%]">
+        <p className="text-center pt-4 text-primary-700 font-medium font-body px-[5%] md:px-[10%] text-lg lg:px-[20%]">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
           tellus felis, congue at eleifend vel, maximus a arcu. Proin consequat
           nisi quis enim malesuada, ac pretium leo convallis

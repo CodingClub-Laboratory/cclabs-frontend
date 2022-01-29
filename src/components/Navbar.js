@@ -1,10 +1,12 @@
 import { animate, timeline } from "motion";
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Logo from "../assets/logo.png";
 export const Navbar = ({ className }) => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const location = useLocation();
+  const isLandingPage = () => location.pathname === "/";
+  
   useEffect(() => {
     if (isOpen) {
       timeline(
@@ -95,7 +97,7 @@ export const Navbar = ({ className }) => {
     <nav className={`${className} fixed z-30 h-auto py-0 w-screen`}>
       <div
         className={`${
-          !color ? "bg-transparent" : "bg-blue-800 shadow-xl"
+          !color && isLandingPage() ? "bg-transparent" : "bg-primary-800 shadow-xl"
         } w-full flex items-center justify-center  text-white py-2 pb-4 ease-in-out`}
       >
         <div className="flex justify-center items-center w-fit">
@@ -117,7 +119,7 @@ export const Navbar = ({ className }) => {
               <NavItem name="Our Projects" />
             </Link>
           </div>
-          <button className="hidden mx-8 bg-gradient-to-r from-blue-300 to-blue-400 hover:bg-gradient-to-l text-white  rounded-2xl text-sm justify-center md:flex items-center px-5 py-2 shadow-xl hover:shadow-none transition-all transform hover:translate-y-1 font-body">
+          <button className="hidden mx-8 bg-gradient-to-r from-primary-300 to-primary-400 hover:bg-gradient-to-l text-white  rounded-2xl text-sm justify-center md:flex items-center px-5 py-2 shadow-xl hover:shadow-none transition-all transform hover:translate-y-1 font-body">
             <img src="github.png" alt="github logo" className="h-6 w-6 mr-2 " />
             <p className="hidden md:block">Sign in with Github</p>
           </button>
@@ -129,8 +131,8 @@ export const Navbar = ({ className }) => {
             <div className="block2 w-7 h-1 bg-white"></div>
             <div className="block3 w-7 h-1 bg-white"></div>
           </button>
-          <div className="nav-menu h-screen w-full flex flex-col py-32 items-center space-y-6 fixed top-0 right-0 md:hidden font-semibold text-2xl bg-gradient-to-bl from-blue-800 to-blue-500">
-            <div className="signin font-semibold py-8 px-6 text-white w-4/5 h-3 bg-blue-300 flex justify-center items-center rounded-full">
+          <div className="nav-menu h-screen w-full flex flex-col py-32 items-center space-y-6 fixed top-0 right-0 md:hidden font-semibold text-2xl bg-gradient-to-bl from-primary-800 to-primary-500">
+            <div className="signin font-semibold py-8 px-6 text-white w-4/5 h-3 bg-primary-300 flex justify-center items-center rounded-full">
               <p className="mr-2">Sign in with Github</p>
               <img
                 src="github.png"
